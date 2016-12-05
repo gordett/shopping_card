@@ -7,15 +7,15 @@ var Product = require('../models/product');
 /* GET home page. */
 router.get('/', function (req, res, next) {
     /*  var products=Product.find();*/
-    Product.find(function (err, docs) {
+   /* Product.find(function (err, docs) {
         var productChunks = [];
         var chunkSize = 3;
         for (var i = 0; i < docs.length; i += chunkSize) {
             productChunks.push(docs.slice(i, i + chunkSize));
         }
         res.render('shop/index', {title: 'Shopping Cart', products: productChunks});
-    })
-
+    })*/
+    res.render('contatos', {title: 'Contatos'});
 });
 
 router.get('/contatos', function (req, res, next) {
